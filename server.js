@@ -10,7 +10,7 @@ const infoRoutes = require('./routes/info'); // Import route info
 const app = express();
 app.use(express.json());
 
-const PORT = process.env.APP_PORT || 4000;
+const PORT = process.env.PORT || 4000; // Sử dụng process.env.PORT do Render cung cấp
 
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
